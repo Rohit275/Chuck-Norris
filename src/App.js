@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     fetchCategory();
     getData();
-  }, [activeCategory]);
+  }, []);
 
   //Fetching the category array list from categoryURL
   const fetchCategory = async () => {
@@ -48,6 +48,13 @@ function App() {
     getData();
   }
 
+  // const changeStyles = () => {
+  //   let element = document.getElementById('button')
+  //   ReactDOM.findDOMNode(element).style.backgroundColor = this.state.isClicked?'red' : 'blue'
+  // }
+
+ 
+
   return (
     <div className="App">
       <header className="App-header">
@@ -55,7 +62,10 @@ function App() {
         <h3>Select the category</h3>
         <div className="button-container">
           {category.map((item) => (
-            <button onClick={() => categoryChange(item)}>
+            <button onClick={() => (
+              categoryChange(item)
+              //changeStyles()
+              )}>
                 {item}
             </button>
           ))}

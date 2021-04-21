@@ -37,19 +37,22 @@
   text-transform: capitalize;
 }
 
+
+
 .button-container button:active {
   transform: scale(0.98);
-  background-color: green;
 }
 
 .button-container button:focus {
   outline: none;
+  background-color: #47d147;
 }
 
 .button-container button:hover {
-  background-color: green;
+  background-color: #47d147;
   transition: 0.3s linear;
 }
+
 
 .box {
   background-color: #ecf0f1;
